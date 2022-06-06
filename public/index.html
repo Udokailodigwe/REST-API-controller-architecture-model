@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles.css">
+    <title>Employee REST API controller</title>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1> REST API Model Documentation</h1>
+        <p class="app__description">
+            The documentation on the functionality and understanding of how this API works is detailed below.
+        </p>
+        <div>
+            <h3> Goal: </h3>
+            <p>
+                This REST API defines various endpoints for client-side interaction. It provide routes for different
+                functionality
+                such
+                as getting all employees, deleting an employee, creating an employee and updating an employee.
+            </p>
+        </div>
+    </header>
+
+
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>HTTP Method</th>
+                <th>Request</th>
+                <th>URL</th>
+                <th>Request body data format</th>
+                <th>Response body data format</th>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>Get all employees </td>
+                <td>'/employees'</td>
+                <td>None</td>
+                <td>Will get all data array of all employee lists in JSON format</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>Get data about a single employee</td>
+                <td>'/employees/:id'</td>
+                <td>None</td>
+                <td>Get an object of an employee in JSON format, based on id. Example: {
+                    Name: 'Mary',
+                    Surname: 'Poppins',
+                    Age: '45',
+                    id: '313abc8798298eetwewe222445'
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>Allow employee to create account</td>
+                <td>'/employees'</td>
+                <td>A JSON object holding data about the new employee
+                    <br>
+                    Example: {
+                    Name: 'Grace',
+                    Surname: 'Jake',
+                    Age: "24"
+                    }
+                </td>
+                <td>A JSON format of the employee's added information, included with a unique id and an extra success
+                    proof
+                    message
+                    <br>
+                    Example: {
+                    id: 313abc8798298eetwewe222445,
+                    username: 'Grace',
+                    Surname: 'Jake',
+                    Age:"24"
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>Allow employee to update their info</td>
+                <td>'/employees/:id'</td>
+                <td>None</td>
+                <td>A JSON format data with the updated result</td>
+            </tr>
+
+            <tr>
+                <td>DELETE</td>
+                <td>Allow employee to delete account</td>
+                <td>'/employees'</td>
+                <td>None</td>
+                <td>Returns a text confirming account deleted</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
