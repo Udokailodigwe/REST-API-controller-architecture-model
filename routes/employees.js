@@ -1,25 +1,17 @@
 import express from 'express';
-import { v4 as uuidv4 } from 'uuid';
-
+import { getEmployees, createEmployees, getEmployee, deleteEmployee, updateEmployee } from '../controller/employees.js';
 
 const router = express.Router();
-const employees = [];
 
 
-/*...CRUD OPERATION...*/
+router.get('/', getEmployees);
 
-/*get all employees endpoint*/
-router.get('/', (req, res) => {
-    res.send(employees);
-});
+router.post('/', createEmployees);
 
-/*post and create a new user endpoint*/
-router.post('/', (req, res) => {
-    const newEmployee = req.body;
-    employees.push({ ...newEmployee, id: uuidv4() });
+router.get('/:id', getEmployee);
 
-    res.send(`Employee with the username ${newEmployee.Name} has been added to the database`);
-});
+router.delete('/:id', deleteEmployee);
 
+router.patch('/:id', updateEmployee);
 
 export default router;
