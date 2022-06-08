@@ -15,7 +15,11 @@ app.use('/employees', employeesRoutes);
 
 /*...CRUD OPERATION...*/
 
-/*get homepage endpoint*/
+/**
+ * GET index page request 
+ * @method GET
+ * @param {URL} endpoint - endpoint to route to home "/"
+ */
 app.get('/', (req, res) => {
     res.send('Hello and welcome to my index page');
 });

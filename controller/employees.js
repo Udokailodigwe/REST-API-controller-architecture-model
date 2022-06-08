@@ -5,12 +5,12 @@ let employees = [];
 
 /*...CRUD OPERATION...*/
 
-/*get all employees endpoint*/
+/*get all employees function*/
 export const getEmployees = (req, res) => {
     res.send(employees);
 }
 
-/*post and create a new employee endpoint*/
+/*post and create a new employee function*/
 export const createEmployees = (req, res) => {
     const newEmployee = req.body;
     employees.push({ ...newEmployee, id: uuidv4() });
