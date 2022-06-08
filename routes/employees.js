@@ -20,21 +20,21 @@ router.post('/', createEmployees);
 /**
  * GET employee page request 
  * @method GET
- * @param {URL} endpoint - endpoint to get an employee "/"
+ * @param {URL} endpoint - endpoint to get an employee "/:id"
  */
 router.get('/:id', getEmployee);
 
 /**
  * Delete employee page request 
  * @method DELETE
- * @param {URL} endpoint - endpoint to delete an employee "/"
+ * @param {URL} endpoint - endpoint to delete an employee "/:id"
  */
 router.delete('/:id', deleteEmployee);
 
 /**
  * Update employee page request 
  * @method UPDATE
- * @param {URL} endpoint - endpoint to update an employee "/"
+ * @param {URL} endpoint - endpoint to update an employee "/:id"
  */
 router.patch('/:id', updateEmployee);
 
