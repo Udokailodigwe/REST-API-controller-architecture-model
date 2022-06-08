@@ -14,4 +14,4 @@ This REST API defines various endpoints for client-side interaction. It provide 
 </ul>
 
 ### Technologies 
-(Express,Node.js, and Javascript).
+(Express,Node.js, HTML, and Javascript).
